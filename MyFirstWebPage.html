@@ -31,9 +31,10 @@
 		}
 		.main-table{
 			Background: #C4C6C8;
-			margin: 100px 100px 100px 70px;
-			height: 160vh;
-			width: 50%;
+			margin: -100px 100px 100px 290px;
+			height: 140vh;
+			width: 65%;
+			min-width: 600px;
 		}
 		.stock{
 			Background: #E1E3E5;
@@ -59,6 +60,52 @@
 			font-family: Arial;
 			font-size: 30px;
 		}
+		.about-index-button {
+			Background: #E1E3E5;
+			width: 250px;
+			height: 90px;
+			border: 2px;
+			border-color: black;
+			border-radius: 3px;
+			box-shadow: 0px 3px 6px 2px #919294;
+			margin: 100px 10px 10px 10px;
+		}
+		.table-text-headers {
+			font-family: Helterskelter;
+			color: #224070;
+			font-size: 16px;
+			font-weight: bold;
+			text-align:  center;
+		}
+		.table-text-content {
+			font-family: Helterskelter;
+			color: #224070;
+			font-size: 14px;
+			text-align:  left;
+		}
+		.table-style-user{
+			border-collapse: collapse; /*убираем пустые промежутки между ячейками*/
+			border: 1px solid grey; /*устанавливаем для таблицы внешнюю границу серого цвета толщиной 1px*/
+
+		}
+		table{
+		border-collapse: collapse;
+		width: 100%;
+		height: 100%;
+		}
+		th {
+		font-weight: normal;
+		  color: #039;
+		  padding: 0px 0px;
+		}
+		td {
+		  color: #669;
+		  border-top: 1px solid #e8edff;
+		  padding: 0px 5px;
+		  width: 25%;
+		  border: 1px solid grey;
+		}
+
 	</style>
 	
 	<script>
@@ -72,157 +119,308 @@
 	<div class="mainlabel"> Dow Jones </div>
 
 </div>
+<div class="about-index-button">  </div>
 
 <div class="main-table"> 
 	<div class="stock"> 
-		<div class="stock-number-place"> 
-			<div class="stock-number"> 1 </div>
-		</div>
+	<table>
+	  <tr class="table-text-headers" >
+		<td>Название компании</td>
+		<td>Тикер</td>
+		<td>Цена, $</td>
+		<td>P/E</td>
+	  </tr>
+	 </table> 
 	</div>
 	<div class="stock"> 
-		<div class="stock-number-place"> 
-			<div class="stock-number"> 2 </div>
-		</div>
+	<table>
+	  <tr class="table-text-content">
+		<td>3M COMPANY</td>
+		<td>MMM</td>
+		<td>149,24</td>
+		<td>19,2</td>
+	  </tr>
+	 </table> 
 	</div>
 	<div class="stock"> 
-		<div class="stock-number-place"> 
-			<div class="stock-number"> 3 </div>
-		</div>
+	<table>
+	  <tr class="table-text-content">
+		<td>Heading 1</td>
+		<td>Heading 2</td>
+		<td>Heading 3</td>
+		<td>Heading 4</td>
+	  </tr>
+	 </table>
 	</div>
 	<div class="stock"> 
-		<div class="stock-number-place"> 
-			<div class="stock-number"> 4 </div>
-		</div>
+	<table>
+	  <tr class="table-text-content">
+		<td>Heading 1</td>
+		<td>Heading 2</td>
+		<td>Heading 3</td>
+		<td>Heading 4</td>
+	  </tr>
+	 </table> 
 	</div>
 	<div class="stock"> 
-		<div class="stock-number-place"> 
-			<div class="stock-number"> 5 </div>
-		</div>
+	<table>
+	  <tr class="table-text-content">
+		<td>Heading 1</td>
+		<td>Heading 2</td>
+		<td>Heading 3</td>
+		<td>Heading 4</td>
+	  </tr>
+	 </table> 
 	</div>
 	<div class="stock"> 
-		<div class="stock-number-place"> 
-			<div class="stock-number"> 6 </div>
-		</div>
+	<table>
+	  <tr class="table-text-content">
+		<td>Heading 1</td>
+		<td>Heading 2</td>
+		<td>Heading 3</td>
+		<td>Heading 4</td>
+	  </tr>
+	 </table> 
 	</div>
 	<div class="stock"> 
-		<div class="stock-number-place"> 
-			<div class="stock-number"> 7 </div>
-		</div>
+	<table>
+	  <tr class="table-text-content">
+		<td>Heading 1</td>
+		<td>Heading 2</td>
+		<td>Heading 3</td>
+		<td>Heading 4</td>
+	  </tr>
+	 </table> 
 	</div>
 	<div class="stock"> 
-		<div class="stock-number-place"> 
-			<div class="stock-number"> 8 </div>
-		</div>
+	<table>
+	  <tr class="table-text-content">
+		<td>Heading 1</td>
+		<td>Heading 2</td>
+		<td>Heading 3</td>
+		<td>Heading 4</td>
+	  </tr>
+	 </table>
 	</div>
 	<div class="stock"> 
-		<div class="stock-number-place"> 
-			<div class="stock-number"> 9 </div>
-		</div>
+	<table>
+	  <tr class="table-text-content">
+		<td>Heading 1</td>
+		<td>Heading 2</td>
+		<td>Heading 3</td>
+		<td>Heading 4</td>
+	  </tr>
+	 </table>
 	</div>
 	<div class="stock"> 
-		<div class="stock-number-place"> 
-			<div class="stock-number"> 10 </div>
-		</div>
-	</div>
-		<div class="stock"> 
-		<div class="stock-number-place"> 
-			<div class="stock-number"> 11 </div>
-		</div>
-	</div>
-		<div class="stock"> 
-		<div class="stock-number-place"> 
-			<div class="stock-number"> 12 </div>
-		</div>
-	</div>
-		<div class="stock"> 
-		<div class="stock-number-place"> 
-			<div class="stock-number"> 13 </div>
-		</div>
-	</div>
-		<div class="stock"> 
-		<div class="stock-number-place"> 
-			<div class="stock-number"> 14 </div>
-		</div>
-	</div>
-		<div class="stock"> 
-		<div class="stock-number-place"> 
-			<div class="stock-number"> 15 </div>
-		</div>
-	</div>
-		<div class="stock"> 
-		<div class="stock-number-place"> 
-			<div class="stock-number"> 16 </div>
-		</div>
-	</div>
-		<div class="stock"> 
-		<div class="stock-number-place"> 
-			<div class="stock-number"> 17 </div>
-		</div>
-	</div>
-		<div class="stock"> 
-		<div class="stock-number-place"> 
-			<div class="stock-number"> 18 </div>
-		</div>
-	</div>
-		<div class="stock"> 
-		<div class="stock-number-place"> 
-			<div class="stock-number"> 19 </div>
-		</div>
-	</div>
-		<div class="stock"> 
-		<div class="stock-number-place"> 
-			<div class="stock-number"> 20 </div>
-		</div>
-	</div>
-		<div class="stock"> 
-		<div class="stock-number-place"> 
-			<div class="stock-number"> 21 </div>
-		</div>
-	</div>
-		<div class="stock"> 
-		<div class="stock-number-place"> 
-			<div class="stock-number"> 22 </div>
-		</div>
-	</div>
-		<div class="stock"> 
-		<div class="stock-number-place"> 
-			<div class="stock-number"> 23 </div>
-		</div>
-	</div>
-		<div class="stock"> 
-		<div class="stock-number-place"> 
-			<div class="stock-number"> 24 </div>
-		</div>
-	</div>
-		<div class="stock"> 
-		<div class="stock-number-place"> 
-			<div class="stock-number"> 25 </div>
-		</div>
-	</div>
-		<div class="stock"> 
-		<div class="stock-number-place"> 
-			<div class="stock-number"> 26 </div>
-		</div>
-	</div>
-		<div class="stock"> 
-		<div class="stock-number-place"> 
-			<div class="stock-number"> 27 </div>
-		</div>
-	</div>
-		<div class="stock"> 
-		<div class="stock-number-place"> 
-			<div class="stock-number"> 28 </div>
-		</div>
-	</div>
-		<div class="stock"> 
-		<div class="stock-number-place"> 
-			<div class="stock-number"> 29 </div>
-		</div>
+	<table>
+	  <tr class="table-text-content">
+		<td>Heading 1</td>
+		<td>Heading 2</td>
+		<td>Heading 3</td>
+		<td>Heading 4</td>
+	  </tr>
+	 </table>
 	</div>
 	<div class="stock"> 
-		<div class="stock-number-place"> 
-			<div class="stock-number"> 30 </div>
-		</div>
+	<table>
+	  <tr class="table-text-content">
+		<td>Heading 1</td>
+		<td>Heading 2</td>
+		<td>Heading 3</td>
+		<td>Heading 4</td>
+	  </tr>
+	 </table>
+	</div>
+	<div class="stock"> 
+	<table>
+	  <tr class="table-text-content">
+		<td>Heading 1</td>
+		<td>Heading 2</td>
+		<td>Heading 3</td>
+		<td>Heading 4</td>
+	  </tr>
+	 </table> 
+	</div>
+	<div class="stock"> 
+	<table>
+	  <tr class="table-text-content">
+		<td>Heading 1</td>
+		<td>Heading 2</td>
+		<td>Heading 3</td>
+		<td>Heading 4</td>
+	  </tr>
+	 </table>
+	</div>
+	<div class="stock"> 
+	<table>
+	  <tr class="table-text-content">
+		<td>Heading 1</td>
+		<td>Heading 2</td>
+		<td>Heading 3</td>
+		<td>Heading 4</td>
+	  </tr>
+	 </table>
+	</div>
+	<div class="stock"> 
+	<table>
+	  <tr class="table-text-content">
+		<td>Heading 1</td>
+		<td>Heading 2</td>
+		<td>Heading 3</td>
+		<td>Heading 4</td>
+	  </tr>
+	 </table>
+	</div>
+	<div class="stock"> 
+	<table>
+	  <tr class="table-text-content">
+		<td>Heading 1</td>
+		<td>Heading 2</td>
+		<td>Heading 3</td>
+		<td>Heading 4</td>
+	  </tr>
+	 </table>
+	</div>
+	<div class="stock"> 
+	<table>
+	  <tr class="table-text-content">
+		<td>Heading 1</td>
+		<td>Heading 2</td>
+		<td>Heading 3</td>
+		<td>Heading 4</td>
+	  </tr>
+	 </table>
+	</div>
+	<div class="stock"> 
+	<table>
+	  <tr class="table-text-content">
+		<td>Heading 1</td>
+		<td>Heading 2</td>
+		<td>Heading 3</td>
+		<td>Heading 4</td>
+	  </tr>
+	 </table>
+	</div>
+	<div class="stock"> 
+	<table>
+	  <tr class="table-text-content">
+		<td>Heading 1</td>
+		<td>Heading 2</td>
+		<td>Heading 3</td>
+		<td>Heading 4</td>
+	  </tr>
+	 </table> 
+	</div>
+	<div class="stock"> 
+	<table>
+	  <tr class="table-text-content">
+		<td>Heading 1</td>
+		<td>Heading 2</td>
+		<td>Heading 3</td>
+		<td>Heading 4</td>
+	  </tr>
+	 </table> 
+	</div>
+	<div class="stock"> 
+	<table>
+	  <tr class="table-text-content">
+		<td>Heading 1</td>
+		<td>Heading 2</td>
+		<td>Heading 3</td>
+		<td>Heading 4</td>
+	  </tr>
+	 </table>
+	</div>
+	<div class="stock"> 
+	<table>
+	  <tr class="table-text-content">
+		<td>Heading 1</td>
+		<td>Heading 2</td>
+		<td>Heading 3</td>
+		<td>Heading 4</td>
+	  </tr>
+	 </table> 
+	</div>
+	<div class="stock"> 
+	<table>
+	  <tr class="table-text-content">
+		<td>Heading 1</td>
+		<td>Heading 2</td>
+		<td>Heading 3</td>
+		<td>Heading 4</td>
+	  </tr>
+	 </table> 
+	</div>
+	<div class="stock"> 
+	<table>
+	  <tr class="table-text-content">
+		<td>Heading 1</td>
+		<td>Heading 2</td>
+		<td>Heading 3</td>
+		<td>Heading 4</td>
+	  </tr>
+	 </table> 
+	</div>
+	<div class="stock"> 
+	<table>
+	  <tr class="table-text-content">
+		<td>Heading 1</td>
+		<td>Heading 2</td>
+		<td>Heading 3</td>
+		<td>Heading 4</td>
+	  </tr>
+	 </table>
+	</div>
+	<div class="stock"> 
+	<table>
+	  <tr class="table-text-content">
+		<td>Heading 1</td>
+		<td>Heading 2</td>
+		<td>Heading 3</td>
+		<td>Heading 4</td>
+	  </tr>
+	 </table>
+	</div>
+	<div class="stock"> 
+	<table>
+	  <tr class="table-text-content">
+		<td>Heading 1</td>
+		<td>Heading 2</td>
+		<td>Heading 3</td>
+		<td>Heading 4</td>
+	  </tr>
+	 </table> 
+	</div>
+	<div class="stock"> 
+	<table>
+	  <tr class="table-text-content">
+		<td>Heading 1</td>
+		<td>Heading 2</td>
+		<td>Heading 3</td>
+		<td>Heading 4</td>
+	  </tr>
+	 </table>
+	</div>
+	<div class="stock"> 
+	<table>
+	  <tr class="table-text-content">
+		<td>Heading 1</td>
+		<td>Heading 2</td>
+		<td>Heading 3</td>
+		<td>Heading 4</td>
+	  </tr>
+	 </table>
+	</div>
+	<div class="stock"> 
+	<table>
+	  <tr class="table-text-content">
+		<td>Heading 1</td>
+		<td>Heading 2</td>
+		<td>Heading 3</td>
+		<td>Heading 4</td>
+	  </tr>
+	 </table> 
 	</div>
 </div>
 
