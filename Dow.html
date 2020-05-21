@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title> Индекс Dow Jones </title>
-	<meta name="description" content="Page Description Here" />
+	<meta name="description" content="Index Dow_30" />
 	<meta http-equiv="Content-Type" content="text/html"; charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale-1" />
 	
@@ -27,7 +27,6 @@
 			font-size: 48px;
 			margin-left: 80px;
 			margin-top: 7px;
-
 			z-index:5;	
 		}
 		.main-table{
@@ -118,7 +117,7 @@
 	<script>
 		document.addEventListener('DOMContentLoaded', () => {
 
-    const getSort = ({ target }) => {
+		const getSort = ({ target }) => {
         const order = (target.dataset.order = -(target.dataset.order || -1));
         const index = [...target.parentNode.cells].indexOf(target);
         const collator = new Intl.Collator(['en', 'ru'], { numeric: true });
