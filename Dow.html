@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Индекс Dow Jones </title>
+	<meta name="description" content="Page Description Here" />
+	<meta http-equiv="Content-Type" content="text/html"; charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale-1" />
+	
+	<style type="text/css">
+
+		Body{
+			Background: #C4C6C8;
+		}
+		.upper-line{
+			Background: #E1E3E5;
+			width: 100%;
+			height: 70px;
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			min-width: 1200px;
+			box-shadow: 0px 3px 6px 3px #919294;
+		}
+		.mainlabel{
+			font-family: Helterskelter;
+			color: #718EB5;
+			font-size: 48px;
+			margin-left: 80px;
+			margin-top: 7px;
+
+			z-index:5;	
+		}
+		.main-table{
+			Background: #C4C6C8;
+			margin: -63px 100px 100px 290px;
+			height: 140vh;
+			width: 65%;
+			min-width: 600px;
+		}
+		.about-index-button {
+			Background: #E1E3E5;
+			width:250px;
+			height: 45px;
+			border: 2px;
+			border-color: black;
+			border-radius: 3px;
+			box-shadow: 0px 3px 6px 2px #919294;
+			margin: 100px 10px 10px 10px;
+			font-family: Helterskelter;
+			color: #224070;
+			font-size: 30px;
+			font-weight: bold;
+			text-align:  center;
+
+		}
+		
+		table {
+			-webkit-border-horizontal-spacing: 0px;
+			-webkit-border-vertical-spacing: 8px;
+			width: 100%;
+		}
+
+		.table_sort th {
+			color: #224070;
+			background: #E1E3E5;
+			cursor: pointer;
+
+
+		}
+
+		.table_sort td,
+		.table_sort th {
+			text-align: center;
+			border-right: 1px solid grey;
+			background: #E1E3E5;
+			width: 25%;	
+			height: 30px;
+			cellspacing: 10px;
+			cellpadding: 10px;
+			z-index:1;
+			
+		}
+		.stock-string{
+		border-radius: 10px;
+		box-shadow: 0px 3px 6px 2px #919294;
+		border-color: black;
+		margin: 0px 20px 0px 0px;
+		font-family: Helterskelter;
+		color: #224070;
+		font-size: 14px;
+		text-align:  left;
+		}
+
+		th.sorted[data-order="1"],
+		th.sorted[data-order="-1"] {
+			position: relative;
+		}
+
+		th.sorted[data-order="1"]::after,
+		th.sorted[data-order="-1"]::after {
+			right: 8px;
+			position: absolute;
+									z-index:0;
+
+		}
+
+		th.sorted[data-order="-1"]::after {
+			content: "▼"
+		}
+
+		th.sorted[data-order="1"]::after {
+			content: "▲"
+		}
+		
+
+	</style>
+	
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+
+    const getSort = ({ target }) => {
+        const order = (target.dataset.order = -(target.dataset.order || -1));
+        const index = [...target.parentNode.cells].indexOf(target);
+        const collator = new Intl.Collator(['en', 'ru'], { numeric: true });
+        const comparator = (index, order) => (a, b) => order * collator.compare(
+            a.children[index].innerHTML,
+            b.children[index].innerHTML
+        );
+        
+        for(const tBody of target.closest('table').tBodies)
+            tBody.append(...[...tBody.rows].sort(comparator(index, order)));
+
+        for(const cell of target.parentNode.cells)
+            cell.classList.toggle('sorted', cell === target);
+    };
+    
+    document.querySelectorAll('.table_sort thead').forEach(tableTH => tableTH.addEventListener('click', () => getSort(event)));
+    
+});
+	</script>
+</head>
+
+<body>
+<div class="upper-line">  
+
+<div class="mainlabel"> Dow Jones </div>
+
+</div>
+<a href="AboutIndexPage.html"><div class="about-index-button">Об индeксе</div></a>
+
+
+<div class="main-table">
+<table class="table_sort" >
+	<thead>
+	  <tr class="stock-string">
+		<th>Название <br> компании </th>
+		<th>Тикер </th>
+		<th>Цена, $ </th>
+		<th border="0">P/E</th>
+	  </tr>
+	 </thead> 
+	<tbody>
+	  <tr class="stock-string">
+		<td>3M COMPANY</td>
+		<td>MMM</td>
+		<td>149,24</td>
+		<td>19,2</td>
+	  </tr>
+	  <tr class="stock-string">
+		<td>AMERICAN EXPRESS CO</td>
+		<td>AXP</td>
+		<td>109,93</td>
+		<td>14,1</td>
+	  </tr>
+	  <tr class="stock-string">
+		<td>APPLE INC</td>
+		<td>AAPL</td>
+		<td>273,36</td>
+		<td>21,6</td>
+	  </tr>
+
+	  <tr class="stock-string">
+		<td>BOEING CO</td>
+		<td>BA</td>
+		<td>275,11</td>
+		<td>None</td>
+	  </tr>
+
+	  <tr class="stock-string">
+		<td>CATERPILLAR INC</td>
+		<td>CAT</td>
+		<td>124,24</td>
+		<td>11,5</td>
+	  </tr>
+
+	  <tr class="stock-string">
+		<td>CHEVRON CORPORATION</td>
+		<td>CVX</td>
+		<td>93,34</td>
+		<td>63,2</td>
+	  </tr>
+
+	  <tr class="stock-string">
+		<td>CISCO SYSTEMS INC</td>
+		<td>CSCO</td>
+		<td>39,93</td>
+		<td>15,6</td>
+	  </tr>
+
+	  <tr class="stock-string">
+		<td>COCA-COLA CO</td>
+		<td>KO</td>
+		<td>53,49</td>
+		<td>26,5</td>
+	  </tr>
+
+	  <tr class="stock-string">
+		<td>EXXON MOBIL CORPORATION</td>
+		<td>XOM</td>
+		<td>51,44</td>
+		<td>14,8</td>
+	  </tr>
+
+	  <tr class="stock-string">
+		<td>GOLDMAN SACHS GROUP INC</td>
+		<td>GS</td>
+		<td>200,77</td>
+		<td>9,7</td>
+	  </tr>
+
+	  <tr class="stock-string">
+		<td>GENERAL ELECTRIC CO</td>
+		<td>GE</td>
+		<td>10,88</td>
+		<td>140,9</td>
+	  </tr>
+
+	  <tr class="stock-string">
+		<td>HOME DEPOT INC</td>
+		<td>HD</td>
+		<td>217,84</td>
+		<td>21,9</td>
+	  </tr>
+
+	  <tr class="stock-string">
+		<td>INTERNATIONAL BUS MACH CORP</td>
+		<td>IBM</td>
+		<td>130,15</td>
+		<td>12,6</td>
+	  </tr>
+
+	  <tr class="stock-string">
+		<td>INTEL CORP</td>
+		<td>INTC</td>
+		<td>55,52</td>
+		<td>11,8</td>
+	  </tr>
+
+	  <tr class="stock-string">
+		<td>JOHNSON & JOHNSON</td>
+		<td>JNJ</td>
+		<td>134,48</td>
+		<td>24,7</td>
+	  </tr>
+
+	  <tr class="stock-string">
+		<td>JPMORGAN CHASE & CO</td>
+		<td>JPM</td>
+		<td>116,11</td>
+		<td>11,3</td>
+	  </tr>
+
+	  <tr class="stock-string">
+		<td>MCDONALD'S CORPORATION</td>
+		<td>MCD</td>
+		<td>194,17</td>
+		<td>25,5</td>
+	  </tr>
+
+	  <tr class="stock-string">
+		<td>MERCK & CO INC</td>
+		<td>MRK</td>
+		<td>76,56</td>
+		<td>20,5</td>
+	  </tr>
+
+	  <tr class="stock-string">
+		<td>MICROSOFT CORP</td>
+		<td>MSFT</td>
+		<td>162,01</td>
+		<td>27,5</td>
+	  </tr>
+
+	  <tr class="stock-string">
+		<td>NIKE INC</td>
+		<td>NKE</td>
+		<td>89,38</td>
+		<td>31,0</td>
+	  </tr>
+
+	  <tr class="stock-string">
+		<td>PFIZER INC</td>
+		<td>PFE</td>
+		<td>33,42</td>
+		<td>11,9</td>
+	  </tr>
+
+	  <tr class="stock-string">
+		<td>PROCTER & GAMBLE CO</td>
+		<td>PG</td>
+		<td>113,23</td>
+		<td>67,0</td>
+	  </tr>
+
+	  <tr class="stock-string">
+		<td>TRAVELERS COMPANIES INC</td>
+		<td>TRV</td>
+		<td>119,81</td>
+		<td>12,5</td>
+	  </tr>
+
+	  <tr class="stock-string">
+		<td>UNITEDHEALTH GROUP INC</td>
+		<td>UNH</td>
+		<td>254,96</td>
+		<td>17,7</td>
+	  </tr>
+
+	  <tr class="stock-string">
+		<td>RAYTHEON CO</td>
+		<td>RTN</td>
+		<td>188,56</td>
+		<td>16,2</td>
+	  </tr>
+
+	  <tr class="stock-string">
+		<td>VERIZON COMMUNICATIONS</td>
+		<td>VZ</td>
+		<td>54,16</td>
+		<td>11,8</td>
+	  </tr>
+
+	  <tr class="stock-string">
+		<td>VISA INC</td>
+		<td>V</td>
+		<td>181,76</td>
+		<td>33,7</td>
+	  </tr>
+
+	  <tr class="stock-string">
+		<td>WALMART INC</td>
+		<td>WMT</td>
+		<td>107,68</td>
+		<td>21,3</td>
+	  </tr>
+
+	  <tr class="stock-string">
+		<td>WALT DISNEY COMPANY</td>
+		<td>DIS</td>
+		<td>117,65</td>
+		<td>18,8</td>
+	  </tr>
+	</tbody>
+ </table>
+</div>
+</body>
+
+</html>
